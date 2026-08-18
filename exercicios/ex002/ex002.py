@@ -13,8 +13,12 @@ variavel = gafanhoto(nome, idade)
     #Metodos de instância
     def aniversario(self):
         self.idade += 1
-    def mensagem(self):
+
+    def __str__(self): # Dunder method
         return f"{self.nome} é gafanhoto(a) tem {self.idade} anos"
+
+    def __getstate__(self):
+        return f"Estado = nome {self.nome}; idade {self.idade}"
 
 
 
@@ -22,6 +26,9 @@ variavel = gafanhoto(nome, idade)
 #Declaração do objetos.
 g1 = Gafanhoto("Maria", 17)
 g1.aniversario()
-#print(g1.mensagem())
+#print(g1)
+print(g1.__dict__)# Attribute
+print(g1.__getstate__()) # Method
+print(g1.__class__)
 
 print(g1.__doc__)# Dunder attribute
