@@ -1,7 +1,7 @@
 from cafeteira import *
 
 def main():
-    bebida = Cafe()
+    bebida = Cha()
     bebida.Preparar()
 
 

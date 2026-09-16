@@ -27,7 +27,7 @@ class Quadrado(Poligono):
 
 
 class circulo(Poligono):
-    def __init__(self, raio):  # Recebe apenas 'raio'
+    def __init__(self, raio=1):
         super().__init__(Qtd_lados=0)
         self.raio = raio
 
