@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 class BebidaQuente(ABC):
 
-
     def Preparar(self):
         print("-- Iniciando o prepararo --")
         self.Ferver_Agua()
