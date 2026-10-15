@@ -40,16 +40,14 @@ class FuncionarioHorista(Funcionario):
         self.sal_bruto = self.valor_hora * self.qtd_horas
 
     def Calc_sal(self):
-        self.sal_bruto = self.valor_hora * self.qtd_horas
-        desconto_inss = self.sal_bruto * self.inss / 100
-        self.salario = self.sal_bruto - desconto_inss
+        self.salario = self.sal_bruto - (self.sal_bruto * Funcionario.inss / 100)
         return self.salario
 
 class FuncionarioMensalista(Funcionario):
-    def __init__(self,nome,sal_bruto):
+    def __init__(self,nome,sal_bruto = Funcionario.sal_min):
         super().__init__(nome)
         self.sal_bruto = sal_bruto
 
     def Calc_sal(self):
-        self.salario = self.sal_bruto - (self.sal_bruto * self.inss / 100)
+        self.salario = self.sal_bruto - (self.sal_bruto * Funcionario.inss / 100)
         return self.salario

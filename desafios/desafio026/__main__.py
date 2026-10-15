@@ -4,7 +4,7 @@ from funcionario import *
 
 def main():
     f1 = FuncionarioHorista("pedro", 12,200)
-    inspect(f1)
+    #inspect(f1)
     f1.Calc_sal()
     f1.Analisar_sal()
 
