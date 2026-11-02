@@ -9,9 +9,11 @@ def main():
     print("--- INÍCIO DA BATALHA ---")
     p1.atacar(p2, 200)
     p2.atacar(p1, 150)
+    p3.atacar(p1, 400)
 
     p1.curar()
     p2.curar()
+    p3.curar()
 
 if __name__ == "__main__":
     main()
